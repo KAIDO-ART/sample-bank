@@ -1,0 +1,277 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.header{
+    width: 100%;
+     /* position: fixed;
+    /* top: 0;
+    left:0%; */
+    /* z-index: 1000;  */
+}
+.nav-content{
+    width: 100%;
+    background-color: #D71D28;
+    display: flex;
+    /* border-bottom: 5px solid #F9CE46; */
+    padding: 18px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* position: relative; */
+
+}
+.logo img{
+    cursor: pointer;
+}
+.menu{
+display: flex;
+/* justify-content: space-between; */
+align-items: center;
+
+
+}
+.menu a{
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: 200;
+    
+    
+}
+.menu .search{
+    font-size: 30px;
+}
+.menu .sign{
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+.contact p{
+    font-size: 18px;
+    color: white;
+    padding: 10px;
+}
+.contact a{
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+.login{
+    width: 100%;
+    height: 100vh;
+    background: #F9CE46;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maincon{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.first-con{
+    width: 500px;
+    /* height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D71D28;
+  
+   padding-left: 50px;
+   padding-right: 50px;
+}
+.first-con img{
+    width: 300px;
+}
+.second-con{
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15%;
+}
+.login-box{
+    width: 320px;
+    height: 420px;
+    background: white;
+    color: black;
+    /* left: 50%;
+    top: 65%;
+    transform: translate(-50%,-50%);
+    position: absolute; */
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 50px 30px;
+   
+}
+h1{
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 33px;
+    font-weight: 300;
+    color: black;
+}
+.login-box{
+    display: flex;
+    flex-direction: column;
+}
+.login-box p{
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+.login-box input{
+    width: 100%;
+    margin-bottom: 25px;
+
+}
+.login-box input[type="text"], input[type="password"]{
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 40px;
+    color: black;
+
+}
+.login-box .btn{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #D71D28;
+    border-radius: 10px;
+    font-size: 15px;
+    color: white;
+    padding: 10px;
+    width: 100%;
+ transition: 0.5s;
+ margin-bottom: 20px;
+
+}
+
+.login-box a{
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 20px;
+    color: darkgray;
+  margin-top: 10px;
+  
+    transition: all 0.5s;
+}
+.login-box a:hover{
+    color: black;
+}
+.nav-openbtn{
+    display: none;
+}
+.nav-closebtn{
+    display: none;
+}
+
+@media screen and (max-width: 480px){
+.maincon{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+.maincon .first-con{
+display: none !important;
+
+}
+.second-con{
+    width: 350px;
+    align-items: center;
+    margin: 0;
+}
+.menu .sign{
+    font-size: 14px;
+    text-align: center;
+   display: flex;
+   align-items: center;
+    width: 100px;
+}
+}
+@media screen and (max-width: 770px){
+nav .menu{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0 0 10px lightslategray;
+    height: 100%;
+    padding: 8rem;
+    z-index: var(--z-fixed);
+    background-color: #F9CE46;
+transition: var(--trans-0-5) ease-in-out;
+}
+nav .menu a{
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px !important;
+    width: 150px;
+
+}
+.nav-closebtn,
+.nav-openbtn{
+    display: block;
+}
+nav .menu.open{
+    right: 0;
+    
+  
+}
+.menu{
+    flex-direction: column;
+    align-items: center;
+}
+.menu a{
+    color: black;
+    background-color: white;
+    /* border-bottom: 1px solid black; */
+}
+.contact{
+    display: none;
+}
+.nav-closebtn{
+position: absolute;
+top: 2rem;
+right: 2rem;
+font-size: 2.5rem;
+cursor: pointer;
+color: black;
+}
+.nav-openbtn{
+font-size: 2.5rem;
+cursor: pointer;
+color: white;
+}
+}

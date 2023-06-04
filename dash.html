@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dash.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+    <script src="js/bootstrap.min.js"></script>
+    <script src="dash.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+    <title>Dashboard</title>
+</head>
+<body>
+
+        <!-- === beginning of navbar === -->
+
+   
+        <nav>
+            <div class="image">
+                <img src="./img/wf_logo_220x23.webp" alt="">
+            </div>
+            <div class="links">
+                <div class="profile-img">
+                    <img src="./img/IMG-20221031-WA0115.jpg" alt="">
+                    <p>BENJAMIN CLARK</p>
+                </div>
+                <a href="http://127.0.0.1:5501/Index.html">Accounts</a>
+                <a href="http://127.0.0.1:5501/services.html">Transfer</a>
+                <a href="http://127.0.0.1:5501/Track.html">Bill pay</a>
+                <a href="http://127.0.0.1:5501/Contact.html">Tools</a>
+                <a href="http://127.0.0.1:5501/Reviews.html">Support</a>
+                <a href="index.html">Home</a>
+            </div>
+            <div class="icon">
+                <i class='bx bx-menu nav-openbtn'></i>
+            </div>
+           </nav> 
+       
+    
+        <!-- == end of navbar == -->
+
+        <!-- === beginning of body section === -->
+
+        <section class="dashboardfullbody">
+
+            <section class="dashboardleft">
+                <div class="leftup">
+                    <span><h1>Accounts Overview</h1></span>
+                </div>
+                <div class="left1">
+                    <div class="left1left"></div>
+                    <div class="left1right">
+                        <div class="accttype">
+                            <div class="ath1">Checking</div>
+                            <div class="ath5">...2457</div>
+                        </div>
+                        <div class="availbalance">
+                            <div class="abh5">Available balance</div>
+                            <div class="abh1"><sup>$</sup><span id="myCheckingBalance">150000</span></div>
+                            <div class="buttondiv">
+                                <button class="sendbutton" data-toggle="modal" data-target="#sendMoney"><h5>Transfer</h5></button>
+                                <!-- <button class="btn btn-info" data-toggle="modal" data-target="#sendMoney">Send Money</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="left1">
+                    <div class="left1left"></div>
+                    <div class="left1right">
+                        <div class="accttype">
+                            <div class="ath1">Savings</div>
+                            <div class="ath5"><div class="5268"></div></div>
+                        </div>
+                        <div class="availbalance">
+                            <div class="abh5">Available balance</div>
+                            <div class="abh1"><sup>$</sup><span id="mySavingsBalance">190000</span></div>
+                            <!-- <div class="buttondiv">
+                                <button class="sendbutton">Send Money</button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="left1">
+                    <div class="left1left"></div>
+                    <div class="left1right">
+                        <div class="accttype">
+                            <div class="ath1">Card</div>
+                            <div class="ath5">...2097</div>
+                        </div>
+                        <div class="availbalance">
+                            <div class="abh5">Available balance</div>
+                            <div class="abh1"><sup>$</sup><span id="myCardBalance">150000</span></div>
+                            <!-- <div class="buttondiv">
+                                <button class="sendbutton">Send Money</button>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <section class="dashboardright">
+                    <div class="rightup">Total Avilable funds</div>
+                    <div class="rightmiddle"></div>
+                    <div class="rightdown"><sup>$</sup><span id="myTotalBalance">490000</span></div>
+                </section>
+
+            
+            </section>
+        </section>
+        
+        <div class="left2">
+            <div class="left1right">
+                <div class="accttype">
+                    <div style="margin-bottom: 0;" class="ath1">Account disclosures</div>
+                    <div style="margin-top: 0;" class="ath5">
+                        Deposit products offered by Wells Fargo Bank, N.A. Member FDIC
+                        <br>
+                        Equal Housing Lender
+                        <br>
+                        FICO is a registered trademark of Fair Isaac Corporation in the United States and other countries.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- == end of body section == -->
+
+
+        <!-- ==ALERT= -->
+
+    <div class="modal fade" role="dialog" id="sendMoney" tabindex="-1">
+      <div class="modal-dialog" role="document">
+          <div class="modal-content">
+              <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Send Money</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+              <div class="modal-body">
+                  <form action="" method="post" >
+      
+                      <div class="input-group mb-3">
+                          <input type="text" name="Account name" id="enterName" class="form-control" placeholder="Accont Name"
+                              aria-label="Account Name" aria-describedby="basic-addon2">
+                          <div class="input-group-append">
+                              <span class="input-group-text" id="basic-addon2"></span>
+                          </div>
+                      </div>
+              
+                      <div class="input-group mb-3">
+                          <input type="text" name="Bank name" id="enterName" class="form-control" placeholder="Bank Name"
+                              aria-label="Bank Name" aria-describedby="basic-addon2">
+                          <div class="input-group-append">
+                              <span class="input-group-text" id="basic-addon2"></span>
+                          </div>
+                      </div>
+              
+                      <div class="input-group mb-3">
+                          <input type="text" name="Account number" id="enterName" class="form-control" placeholder="Account Number"
+                              aria-label="Account Number" aria-describedby="basic-addon2">
+                          <div class="input-group-append">
+                              <span class="input-group-text" id="basic-addon2"></span>
+                          </div>
+                      </div>
+              
+                      <div class="input-group mb-3">
+                          <input type="text" name="Routing number" id="enterName" class="form-control" placeholder="Routing Number"
+                              aria-label="Routing Number" aria-describedby="basic-addon2">
+                          <div class="input-group-append">
+                              <span class="input-group-text" id="basic-addon2"></span>
+                          </div>
+                      </div>
+              
+                      <div class="input-group mb-3">
+                          <div class="input-group-prepend">
+                              <span class="input-group-text">$</span>
+                          </div>
+                          <input type="text" name="Amount" id="enterAmount" class="form-control" placeholder=" Enter Amount"
+                              aria-label="Amount (to the nearest dollar)">
+                          <div class="input-group-append">
+                              <span class="input-group-text">.00</span>
+                          </div>
+                          <div class="input-group mb-3">
+                              <input type="date" name="Date" class="form-control" id="formGroupExampleInput">
+                          </div>
+                      </div>
+          
+                  </form>
+              </div>
+              <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" onclick="sendMoney()" class="btn btn-success" data-dismiss="modal">Send
+                      Money</button>
+              </div>
+          </div>
+      </div>
+    </div>
+  <!-- ======== -->
+
+  <!-- table  -->
+<div style="display: none;" class="container">
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr class="table-danger">
+                    <th scope="col">Sl. No.</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Bank Balance(in $)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-light">
+                    <td scope="row">1</td>
+                    <td>bella</td>
+                    <td>bella@email.com</td>
+                    <td>
+                        <p id="bellaBankBalance">4500</p>
+                    </td>
+                </tr>
+                <tr class="table-info">
+                    <td scope="row">2</td>
+                    <td>Yoshi</td>
+                    <td>Yoshi@email.com</td>
+                    <td>
+                        <p id="YoshiBankBalance">24000</p>
+                    </td>
+                </tr>
+                <tr class="table-light">
+                    <td scope="row">3</td>
+                    <td>yoshi</td>
+                    <td>yoshi@email.com</td>
+                    <td>
+                        <p id="yoshiBankBalance">3400</p>
+                    </td>
+                </tr>
+                <tr class="table-info">
+                    <td scope="row">4</td>
+                    <td>yoshi&nbsp;hakuna</td>
+                    <td>yoshi&nbsp;hakuna@email.com</td>
+                    <td>
+                        <p id="yoshi&nbsp;hakunaBankBalance">4000</p>
+                    </td>
+                </tr>
+                <tr class="table-light">
+                    <td scope="row">5</td>
+                    <td>Hari</td>
+                    <td>hari@email.com</td>
+                    <td>
+                        <p id="hariBankBalance">6300</p>
+                    </td>
+                </tr>
+                <tr class="table-info">
+                    <td scope="row">6</td>
+                    <td>Venky</td>
+                    <td>venky@email.com</td>
+                    <td>
+                        <p id="venkyBankBalance">1003</p>
+                    </td>
+                </tr>
+                <tr class="table-light">
+                    <td>7</td>
+                    <td>jack</td>
+                    <td>jack@email.com</td>
+                    <td>
+                        <p id="jackBankBalance">5600</p>
+                    </td>
+                </tr>
+                <tr class="table-info">
+                    <td scope="row">8</td>
+                    <td>Jack</td>
+                    <td>sameer@email.com</td>
+                    <td>
+                        <p id="sameerBankBalance">35603</p>
+                    </td>
+                </tr>
+                <tr class="table-light">
+                    <td scope="row">9</td>
+                    <td>Mahesh</td>
+                    <td>mahesh@email.com</td>
+                    <td>
+                        <p id="maheshBankBalance">8500</p>
+                    </td>
+                </tr>
+                <tr class="table-info">
+                    <td scope="row">10</td>
+                    <td>Ramu</td>
+                    <td>ramu@email.com</td>
+                    <td>
+                        <p id="ramuBankBalance">1350</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  
+  <!-- ==== -->
+
+
+  <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  <script>
+      $(document).ready(function(){
+          $('.nav-openbtn').click(function(){
+              $('.links').toggleClass('show')
+          })
+      })
+  </script>
+</body>
+</html>

@@ -1,0 +1,922 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+nav{
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; */
+    background: #D71D28;
+    border-bottom: 3px solid #F9CE46;
+
+}
+.image{
+    display: flex;
+    align-items: center;
+}
+.image img{
+    width: 200px;
+}
+.links{
+    display: flex;
+    align-items: center;
+   
+
+}
+.links a{
+    margin: 10px;
+    font-size: 15px;
+    color: white;
+    /* padding: 5px 20px; */
+    transition: 0.5s ease-in-out;
+    border-radius: 6px;
+
+}
+.links .sign{
+    font-size: 15px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: white;
+    color: black;
+    text-align: center;
+}
+.links a:hover{
+  
+text-decoration: underline;
+ 
+}
+nav .icon{
+    display: none;
+}
+nav .icon .nav-openbtn{
+color: white;
+font-size: 30px;
+
+}
+.next-links{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.next-con{
+    display: flex;
+    align-items: center;
+    padding: 20px 25px;
+}
+.next-con a{
+    color: darkslategray;
+    font-size: 14px;
+    margin-right: 19px;
+}
+.next-con a:hover{
+    text-decoration: underline;
+    transition: 0.5s;
+}
+.login{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    background: beige;
+    margin-bottom: 20px;
+}
+.login .login-con{
+width: 100%;
+height: 75vh;
+background-image: url(./wfi_ph_b_mv_0723_3954_b_1700x700.webp);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+display: flex;
+padding: 10px;
+/* flex-direction: column; */
+
+}
+.login-con .login-card{
+    width: 300px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:  0px 5px 10px 5px  lightgray;
+    padding: 15px;
+    overflow: hidden;
+    margin-right: 40px;
+}
+.login-card .good{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+.good h3{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.good p{
+    font-size: 14px;
+    color: lightslategray;
+}
+.input{
+   
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.input input{
+    border: none;
+   
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    outline: none;
+    height: 50px;
+    padding-left: 10px; 
+
+}
+input::placeholder{
+    font-size: 17px;
+    font-weight: 100;
+    color: lightslategray;
+}
+.input .save{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.save input[type="checkbox"]{
+    height: 30px;
+    width: 30px;
+}
+.save p{
+    text-align: center;
+    font-size: 15px;
+    margin-left: 5px;
+   
+    font-size: 14px;
+}
+.login-card .submitting{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.submitting .sign-on{
+    padding: 10px 50px;
+    background-color: #D71D28;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+}
+.submitting a{
+    margin-left: 20px;
+    font-size: 15px;
+    color: black;
+}
+.submitting a:hover{
+    text-decoration: underline;
+    transition: 0.5s;
+}
+.login-card .other-links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: lightgray;
+    width: 290px;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    border-radius: 10px;
+    box-shadow:  0px 0px 5px 0px  lightgray;
+}
+.other-links a{
+    font-size: 14px;
+    color: black;
+    margin-bottom: 5px;
+}
+.other-links a:hover{
+    text-decoration: underline;
+   
+}
+.login-con .simplify{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 450px;
+    height: 300px;
+}
+.simplify h2{
+    font-size: 45px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 30px;
+}
+.simplify p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.simplify a{
+    width: 100px;
+    font-size: 18px;
+    padding: 10px 50px;
+    color: darkslategray;
+    font-weight: 500;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.simplify a:hover{
+    background-color: black;
+    color: white;
+}
+.earn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.earn .earn-con{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+
+}
+.earn-con .earn-card{
+    width: 270px;
+    height: 250px;
+    background-color: #FBF9F8;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    padding: 15px;
+    box-shadow:  1px 1px 3px 1px  lightgray;
+    border-radius: 10px;
+}
+.earn-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+.earn-img img{
+    width: 80px;
+    object-fit: contain;
+    object-position: center;
+}
+.earn-card .earn-info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    
+}
+.earn-info h3{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.earn-info p{
+    font-size: 15px;
+}
+.earn-card .earn-link{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+.earn-link a{
+    color: black;
+    font-weight: 600;
+}
+.earn-link a:hover{
+    text-decoration: underline;
+}
+.earn-card:nth-child(1){
+    margin-right: 20px;
+}
+.earn-card:nth-child(2){
+    margin-right: 20px;
+}
+.earn-card:nth-child(3){
+    margin-right: 20px;
+}
+.earn-card:nth-child(4){
+    background-color: white;
+}
+
+.earn-card:nth-child(1) .earn-link{
+    margin-top: 90px;
+}
+.earn-card:nth-child(2) .earn-link{
+    margin-top: 90px;
+}
+.earn-card:nth-child(3) .earn-link{
+    margin-top: 75px;
+}
+.earn-card:nth-child(4) .earn-link{
+    margin-top: 30px;
+}
+.earn-card:nth-child(4) .earn-img{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    margin-top: 10px;
+}
+.earn-card:nth-child(4) .earn-img img{
+    width: 200px;
+}
+
+.bonus{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bonus-con{
+    width: 100%;
+    height: 90vh;
+    background-image: url(./autograph_hplp_1600x700.webp);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+}
+.bonus-con .bonus-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 50px;
+    margin-top: 80px;
+    width: 450px;
+}
+.bonus-info h2{
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.bonus-info p{
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    width: 450px;
+}
+.bonus-info a{
+    width: 100px;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 40px;
+    color: black;
+    font-weight: 500;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+.bonus-info a:hover{
+    background-color: black;
+    color: white;
+}
+
+.guide{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.guide .guide-title{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.guide .line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2px;
+    width: 60px;
+    background-color: #F9CE46;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.guide-title h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.guide-con{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px; */
+}
+.guide-con .guide-card{
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow:  1px 1px 3px 1px  lightgray;
+    background-color: white;
+    
+}
+.guide-card:nth-child(1){
+    margin-right: 40px;
+}
+.guide-card:nth-child(2){
+    margin-right: 30px;
+}
+.guide-card .img{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.guide-card .img img{
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+}
+.guide-card .card-info{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+.card-info h3{
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 20px;
+}
+.card-info .guide-link{
+    padding: 20px;
+}
+.guide-link a{
+    font-size: 15px;
+    font-weight: 600;
+    color: darkslategray;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid black;
+    margin-left: 20px;
+
+}
+.guide-link a:hover{
+    color: white;
+    background-color: black;
+}
+.guide-card:nth-child(1) .card-info{
+    margin-bottom: 80px;
+}
+
+.serving{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.serving .serve-title{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.serving .line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2px;
+    width: 60px;
+    background-color: #F9CE46;
+    border-radius: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.serve-title h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+.serve-con{
+    width: 100%;
+    /* padding: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.serve-con .Serve-card{
+    width: 620px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow:  1px 1px 3px 1px  lightgray;
+    background-color: white;
+}
+.Serve-card:nth-child(1){
+    margin-right: 40px;
+}
+.Serve-card .serve-img{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Serve-card .serve-img img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+.Serve-card .serve-info{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.serve-info h3{
+    font-weight: 600;
+    font-size: 20px;
+    color: black;
+    margin-bottom: 20px;
+}
+.serve-info .serve-link{
+    padding: 20px;
+}
+.serve-link a{
+    font-size: 15px;
+    font-weight: 600;
+    color: darkslategray;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid black;
+    margin-left: 20px;
+
+}
+.serve-link a:hover{
+    color: white;
+    background-color: black;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   
+    background-color: lightgray;
+}
+.first-footer{
+    display: flex;
+    width: 1000px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+.first-footer a{
+    color: black;
+    font-size: 12px;
+    padding: 3px 20px;
+    border-right: 1px solid black;
+    margin-bottom: 10px;
+}
+.first-footer a:hover{
+    text-decoration: underline;
+}
+.first-footer a:nth-child(10){
+    border: none;
+}
+.second-footer{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+.second-footer h3{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+.second-footer p{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  margin-left: 10px;
+}
+.second-footer p:nth-child(4){
+    margin-bottom: 0;
+}
+.third-footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
+   
+}
+.third-footer p{
+    font-size: 13px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+
+}
+
+@media screen and (max-width: 480px){
+    .menu .sign{
+        font-size: 14px;
+        text-align: center;
+       display: flex;
+       align-items: center;
+        width: 100px;
+    }
+    .next-con{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .next-con a{
+        margin-bottom: 25px;
+    }
+    .login-card{
+        display: none !important;
+    }
+    .login{
+        width: 100%;
+        height: 50vh;
+        background-size: auto;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .login-con{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .login-con .simplify{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .simplify p{
+        text-align: center;
+    }
+    .earn-con{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .earn-card{
+        margin-bottom: 20px;
+    }
+    .earn-card:nth-child(1){
+        margin-right: 0;
+    }
+    .earn-card:nth-child(2){
+        margin-right: 0;
+    }
+    .earn-card:nth-child(3){
+        margin-right: 0;
+    }
+    .bonus{
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .bonus-con{
+        width: 100%;
+        height: 50vh;
+        background-image: url(./autograph_hplp_1600x700.webp);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .bonus-con .bonus-info{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+    .bonus-info h2{
+        font-size: 30px;
+        text-align: center;
+        font-weight: 600;
+        color: #fcc923;
+    }
+    .bonus-info p{
+        font-size: 20px;
+        text-align: center;
+        width: 100%;
+        font-weight: 600;
+        color: white;
+
+    }
+    .guide-con{
+        display: flex;
+        flex-direction: column;
+padding: 10px;
+    }
+    .guide-con .guide-card{
+        width: 320px;
+        margin-bottom: 30px;
+    }
+    .guide-card:nth-child(1){
+        margin-right: 0;
+    }
+    .guide-card:nth-child(2){
+        margin-right: 0;
+    }
+    .guide-card .img{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .guide-card .img img{
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+        object-position: center;
+    }
+     .guide-link{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+    }
+    .guide-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .guide-card .card-info{
+        margin-bottom: 40px;
+    }
+    .guide-card:nth-child(1) .card-info{
+        margin-bottom: 60px;
+    }
+    .guide-link a{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    .serve-con{
+        display: flex;
+        flex-direction: column;
+    }
+    .serve-con .Serve-card{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        box-shadow:  1px 1px 3px 1px  lightgray;
+        background-color: white;
+        margin-bottom: 30px;
+    }
+    .Serve-card:nth-child(1){
+        margin-right: 0;
+    }
+    .Serve-card .serve-img{
+        width: 100%;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Serve-card .serve-img img{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        object-position: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .Serve-card .serve-info{
+        margin-bottom: 20px;
+    }
+    .serve-info h3{
+        margin-bottom: 10px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .first-footer{
+        display: flex;
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 25px;
+        
+    }
+    .first-footer a{
+        color: black;
+        font-size: 12px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        padding-right: 10px;
+        padding-left: 10px;
+        border-right: 1px solid black;
+        margin-bottom: 10px;
+    }
+    .second-footer{
+        margin: 0;
+    }
+    .third-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    .third-footer p{
+        padding: 10px !important;
+    }
+}
+@media screen and (max-width: 770px){
+    .links{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #fcc923;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 5px 10px darkgrey;
+        transition: all 0.5s;
+    }
+    .links a{
+        text-align: center;
+        margin: 10px;
+        color: black;
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .links.show{
+        left: 0;
+    }
+    nav .icon {
+        display: block;
+    }
+}
+
+   
